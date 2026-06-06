@@ -105,10 +105,13 @@ export const MENU = [
     intro_en:"Our delicious bone-in wings made your way. Hand-tossed in your choice of sauce, served with carrot & dipping sauce.",
     intro_ar:"أجنحة دجاج بالعظم محضّرة على ذوقك، متبّلة بصلصتك المفضّلة، تُقدّم مع الجزر وصلصة الغمس.",
     items:[
-      {nm_en:"Choose Your Sauce", nm_ar:"اختر صلصتك",
+      {nm_en:"Buffalo · Honey Mustard · BBQ", nm_ar:"بافلو · هاني مسترد · باربكيو",
        opts:[
-         {o_en:"Buffalo · Honey Mustard · BBQ", o_ar:"بافلو · هاني مسترد · باربكيو", price:"10 pcs 7,500"},
-         {o_en:"Garlic Parmesan · Crazy Wings · Buffalo & BBQ Mix", o_ar:"غارليك بارميزان · كريزي وينغز · مكس بافلو وباربكيو", price:"10 pcs 8,500"}
+         {o_en:"10 pcs", o_ar:"١٠ قطع", price:"7,500"}
+       ]},
+      {nm_en:"Garlic Parmesan · Crazy Wings · Buffalo & BBQ Mix", nm_ar:"غارليك بارميزان · كريزي وينغز · مكس بافلو وباربكيو",
+       opts:[
+         {o_en:"10 pcs", o_ar:"١٠ قطع", price:"8,500"}
        ]}
     ],
     meal:true
