@@ -50,7 +50,7 @@ export default function HomeScreen({ onNavigate }) {
             <span className="ico"><ion-icon name="ice-cream"></ion-icon></span>
             <span className="txt">
               <span className="big"><T en="Drinks & Dessert" ar="المشروبات والحلى" /></span>
-              <span className="sub"><T en="Coming soon" ar="قريباً" /></span>
+              <span className="sub"><T en="Milkshakes · Mocktails · Drinks" ar="ميلك شيك · موكتيل · مشروبات" /></span>
             </span>
             <span className="arr"><ion-icon name="arrow-forward"></ion-icon></span>
           </button>

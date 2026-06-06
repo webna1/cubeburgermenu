@@ -63,14 +63,14 @@ export const MENU = [
        ds_en:"Mixed greens, cherry tomato, cucumber, red cabbage, green onion & croutons in feta dressing, topped with wonton strips & black olives.",
        ds_ar:"خضار مشكّلة وطماطم كرزيّة وخيار وملفوف أحمر وبصل أخضر وكروتون بصلصة الفيتا، مع شرائح الونتون والزيتون الأسود.", price:"8,500"},
       {nm_en:"Cube Salad", nm_ar:"سلطة كيوب",
-       ds_en:"Grilled chicken on mixed greens & red cabbage with croutons in balsamic & corn.",
-       ds_ar:"دجاج مشوي على خضار مشكّلة وملفوف أحمر مع كروتون بصلصة البلسميك والذرة.", price:"—"},
+       ds_en:"Grilled chicken breast on mixed greens, red cabbage & green onions with croutons in balsamic dressing, topped with corn relish, drizzled with chipotle ranch & garnished with wonton strips. Served with cheese quesadillas.",
+       ds_ar:"صدر دجاج مشوي على خضار مشكّلة وملفوف أحمر وبصل أخضر مع كروتون بصلصة البلسميك، مغطّى بصلصة الذرة، مرشوش بتشيبوتلي رانش ومزيّن بشرائح الونتون. يُقدّم مع كاساديا بالجبن.", price:"14,750"},
       {nm_en:"Crab Salad", nm_ar:"سلطة السلطعون",
        ds_en:"Julienned crab meat, carrots & cucumbers in candied sauce, topped with red cabbage, wonton strips & cashew nuts.",
-       ds_ar:"شرائح لحم سلطعون وجزر وخيار بصلصة محلّاة، مع الملفوف الأحمر وشرائح الونتون والكاجو.", price:"—"},
-      {nm_en:"Buffalo Ranch", nm_ar:"بافلو رانش",
-       ds_en:"Golden fried chicken on mixed greens, cherry tomato, onion & croutons in Italian dressing.",
-       ds_ar:"دجاج مقلي ذهبي على خضار مشكّلة وطماطم كرزيّة وبصل وكروتون بصلصة إيطاليّة.", price:"—"}
+       ds_ar:"شرائح لحم سلطعون وجزر وخيار بصلصة محلّاة، مع الملفوف الأحمر وشرائح الونتون والكاجو.", price:"13,750"},
+      {nm_en:"Buffalo Chicken Ranch", nm_ar:"دجاج بافلو رانش",
+       ds_en:"Golden fried chicken breast on mixed greens, iceberg, red cabbage, cherry tomato, onion & croutons in Italian dressing, drizzled with chipotle ranch, topped with grated cheddar. Served with buffalo sauce on the side.",
+       ds_ar:"صدر دجاج مقلي ذهبي على خضار مشكّلة وخس جليدي وملفوف أحمر وطماطم كرزيّة وبصل وكروتون بصلصة إيطاليّة، مرشوش بتشيبوتلي رانش ومغطّى بشيدر مبشور. يُقدّم مع صلصة بافلو على الجانب.", price:"13,750"}
     ]
   },
   {
@@ -162,6 +162,33 @@ export const MENU = [
     note_ar:"تُقدّم الوجبات مع البطاطا ومشروب محلّي."
   },
   {
+    id:"addons", img:null,
+    kicker_en:"Make it yours", kicker_ar:"خصّصها كما تشاء",
+    name_en:"Add-ons", name_ar:"إضافات",
+    sauces:[
+      {sn_en:"Add Beef Patty (150g)", sn_ar:"إضافة قطعة لحم ١٥٠غ", price:"5,000"},
+      {sn_en:"Add Crab Meat", sn_ar:"إضافة لحم سلطعون", price:"5,000"},
+      {sn_en:"Add Grilled Shrimps", sn_ar:"إضافة روبيان مشوي", price:"6,000"},
+      {sn_en:"Add Chicken Breast", sn_ar:"إضافة صدر دجاج", price:"3,500"},
+      {sn_en:"Add Beef Bacon", sn_ar:"إضافة لحم بقري مدخّن", price:"2,000"},
+      {sn_en:"Add Extra Cheese", sn_ar:"إضافة جبن إضافي", price:"1,250"}
+    ]
+  },
+  {
+    id:"upgrades", img:null,
+    kicker_en:"Upgrade your meal", kicker_ar:"طوّر وجبتك",
+    name_en:"Fries Upgrades", name_ar:"ترقيات البطاطا",
+    sauces:[
+      {sn_en:"Curly Fries", sn_ar:"بطاطا كيرلي", price:"+2,250"},
+      {sn_en:"Cube Fries", sn_ar:"بطاطا كيوب", price:"+2,250"},
+      {sn_en:"Cheese on Fries", sn_ar:"بطاطا بالجبن", price:"+2,000"},
+      {sn_en:"Onion Rings (10 pcs)", sn_ar:"حلقات البصل ١٠ قطع", price:"+3,000"},
+      {sn_en:"Texas Fries", sn_ar:"بطاطا تكساس", price:"+4,500"},
+      {sn_en:"Cube Style Fries", sn_ar:"بطاطا ستايل كيوب", price:"+4,500"},
+      {sn_en:"Alfredo Fries", sn_ar:"بطاطا ألفريدو", price:"+4,500"}
+    ]
+  },
+  {
     id:"sauces", img:null,
     kicker_en:"On the side", kicker_ar:"إضافات جانبيّة",
     name_en:"Dipping Sauces", name_ar:"صلصات الغمس",
@@ -184,5 +211,44 @@ export const MENU = [
     ],
     note_en:"All combos served with French fries & a local drink.",
     note_ar:"تُقدّم جميع الكومبو مع البطاطا المقليّة ومشروب محلّي."
+  }
+]
+
+export const DRINKS = [
+  {
+    id:"milkshakes", img:"/images/sec-spread.jpg",
+    kicker_en:"Creamy & Cold", kicker_ar:"كريمي وبارد",
+    name_en:"Milkshakes", name_ar:"ميلك شيك",
+    items:[
+      {nm_en:"Vanilla", nm_ar:"فانيلا", price:"8,000"},
+      {nm_en:"Chocolate", nm_ar:"شوكولاتة", price:"8,000"},
+      {nm_en:"Strawberry", nm_ar:"فراولة", price:"8,000"},
+      {nm_en:"Pineapple", nm_ar:"أناناس", price:"8,000"},
+      {nm_en:"Mango", nm_ar:"مانجو", price:"8,000"}
+    ]
+  },
+  {
+    id:"mocktails", img:null,
+    kicker_en:"Refreshing Sips", kicker_ar:"رشفات منعشة",
+    name_en:"Mocktails & Smoothies", name_ar:"موكتيل وسموذي",
+    items:[
+      {nm_en:"Breezy Bay", nm_ar:"بريزي باي", price:"8,000"},
+      {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", price:"8,000"},
+      {nm_en:"Tropical Mocktail", nm_ar:"موكتيل استوائي", price:"8,000"},
+      {nm_en:"Frozen Blackberry Pepsi", nm_ar:"بيبسي توت بارد", price:"8,000"},
+      {nm_en:"Cranberry Orange Smoothie", nm_ar:"سموذي التوت البري والبرتقال", price:"8,000"}
+    ]
+  },
+  {
+    id:"softdrinks", img:null,
+    kicker_en:"Classic Sips", kicker_ar:"مشروبات كلاسيكية",
+    name_en:"Soft Drinks", name_ar:"مشروبات غازية",
+    items:[
+      {nm_en:"Pepsi", nm_ar:"بيبسي", price:"1,000"},
+      {nm_en:"Seven Up", nm_ar:"سفن أب", price:"1,000"},
+      {nm_en:"Miranda", nm_ar:"ميراندا", price:"1,000"},
+      {nm_en:"Special Edition Pepsi", nm_ar:"بيبسي إصدار خاص", price:"1,500"},
+      {nm_en:"Water", nm_ar:"ماء", price:"750"}
+    ]
   }
 ]
