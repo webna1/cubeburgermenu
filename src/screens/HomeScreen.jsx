@@ -37,19 +37,11 @@ export default function HomeScreen({ onNavigate }) {
           </div>
         </div>
 
-        <div className="hero-card">
-          <img src="/images/hero-tower.jpg" alt="Cube Burger stack" />
-          <div className="hero-badge">
-            <ion-icon name="star"></ion-icon>
-            <span><T en="King of the Table" ar="ملك الطاولة" /></span>
-          </div>
-        </div>
-
         <nav className="cta">
           <button className="cbtn cbtn-primary" onClick={() => onNavigate('menu')}>
             <span className="ico"><ion-icon name="fast-food"></ion-icon></span>
             <span className="txt">
-              <span className="big"><T en="Menu" ar="القائمة" /></span>
+              <span className="big"><T en="Food" ar="الطعام" /></span>
               <span className="sub"><T en="Burgers · Sides · Salads" ar="برجر · أطباق جانبية · سلطات" /></span>
             </span>
             <span className="arr"><ion-icon name="arrow-forward"></ion-icon></span>

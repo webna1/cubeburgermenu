@@ -3,7 +3,6 @@ import { useLang } from '../context/LangContext'
 import { MENU } from '../data/menuData'
 import { T } from '../components/T'
 import MenuSection from '../components/MenuSection'
-import { CubeLogo } from '../components/CubeLogo'
 
 export default function MenuScreen({ onBack }) {
   const { toggleLang } = useLang()
@@ -142,7 +141,7 @@ export default function MenuScreen({ onBack }) {
       </div>
 
       <footer className="foot">
-        <CubeLogo size={34} />
+        <img className="logo-foot" src="/images/cube-logo.png" alt="Cube Burger" />
         <div className="fl"><T en="All prices in Iraqi Dinar (IQD)" ar="جميع الأسعار بالدينار العراقي" /></div>
         <div className="fl brandline">@cubeburgeriraq</div>
         <div className="fl"><T en="King of the Table" ar="ملك الطاولة" /></div>
