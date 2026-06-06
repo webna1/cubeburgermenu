@@ -146,14 +146,7 @@ export const MENU = [
        ds_ar:"صدر دجاج مقلي مقرمش، مايونيز الثوم، مخلّل، بصل، شيدر، مع شرائح ديك رومي مدخّن ولمسة كول سلو.", sm:["11,750","14,750"]},
       {nm_en:"Grilled Chicken", nm_ar:"دجاج مشوي",
        ds_en:"Grilled chicken breast marinated in our chef's recipe, white cheese, garlic mayo, lettuce, tomato, onions & pickles.",
-       ds_ar:"صدر دجاج مشوي متبّل بوصفة الشيف، جبن أبيض، مايونيز الثوم، خس، طماطم، بصل ومخلّل.", sm:["8,750","11,750"]}
-    ]
-  },
-  {
-    id:"steak", img:"/images/sec-spread.jpg",
-    kicker_en:"Follow your cravings", kicker_ar:"اتبع رغباتك",
-    name_en:"Steak Sandwiches", name_ar:"ساندويتش الستيك",
-    items:[
+       ds_ar:"صدر دجاج مشوي متبّل بوصفة الشيف، جبن أبيض، مايونيز الثوم، خس، طماطم، بصل ومخلّل.", sm:["8,750","11,750"]},
       {nm_en:"Chicken Philly Cheese Steak", nm_ar:"فيلي تشيز ستيك بالدجاج",
        ds_en:"Chicken breast cuts, mixed cheese, fresh mushrooms, onion, mixed bell pepper & garlic mayo.",
        ds_ar:"قطع صدر دجاج، جبن مشكّل، فطر طازج، بصل، فلفل ملوّن، مايونيز الثوم.", sm:["10,000","13,000"]}

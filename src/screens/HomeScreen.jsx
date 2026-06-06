@@ -10,7 +10,7 @@ export default function HomeScreen({ onNavigate }) {
         <div className="toprow">
           <span className="loc">
             <ion-icon name="location"></ion-icon>
-            <T en="Cube Burger · Iraq" ar="كيوب برجر · العراق" />
+            <T en="Cube Burger · Baghdad, Iraq" ar="كيوب برجر · بغداد، العراق" />
           </span>
           <div className="lang" role="group" aria-label="Language">
             <button
@@ -56,7 +56,7 @@ export default function HomeScreen({ onNavigate }) {
           </button>
         </nav>
 
-        <div className="handle">@cubeburgeriraq</div>
+        <div className="handle"><ion-icon name="logo-instagram"></ion-icon> @cubeburger_irq</div>
       </div>
     </section>
   )
