@@ -78,12 +78,19 @@ export const MENU = [
     kicker_en:"Chicken Sides", kicker_ar:"أطباق الدجاج الجانبيّة",
     name_en:"Boneless", name_ar:"بدون عظم",
     items:[
-      {nm_en:"Boneless", nm_ar:"دجاج بدون عظم",
+      {nm_en:"Buffalo · Honey Mustard · BBQ", nm_ar:"بافلو · هاني مسترد · باربكيو",
        ds_en:"Bites of chicken breast, hand-breaded, deep fried to golden crispy & tossed in your choice of our homemade sauces.",
        ds_ar:"قطع صدر دجاج مغطّاة يدويًا ومقليّة حتى الذهبيّة والقرمشة، متبّلة بصلصتك المفضّلة.",
        opts:[
-         {o_en:"Buffalo · Honey Mustard · BBQ", o_ar:"بافلو · هاني مسترد · باربكيو", price:"6 pcs 8,500 · 10 pcs 13,500"},
-         {o_en:"Parmesan Buffalo · Crazy Bites · Garlic Parmesan", o_ar:"بارميزان بافلو · كريزي بايتس · غارليك بارميزان", price:"6 pcs 9,500 · 10 pcs 14,750"}
+         {o_en:"6 pcs", o_ar:"٦ قطع", price:"8,750"},
+         {o_en:"10 pcs", o_ar:"١٠ قطع", price:"13,500"}
+       ]},
+      {nm_en:"Parmesan Buffalo · Crazy Bites · Garlic Parmesan", nm_ar:"بارميزان بافلو · كريزي بايتس · غارليك بارميزان",
+       ds_en:"Bites of chicken breast, hand-breaded, deep fried to golden crispy & tossed in your choice of our homemade sauces.",
+       ds_ar:"قطع صدر دجاج مغطّاة يدويًا ومقليّة حتى الذهبيّة والقرمشة، متبّلة بصلصتك المفضّلة.",
+       opts:[
+         {o_en:"6 pcs", o_ar:"٦ قطع", price:"9,500"},
+         {o_en:"10 pcs", o_ar:"١٠ قطع", price:"14,750"}
        ]},
       {nm_en:"Kids Chicken Bites · 5 pcs", nm_ar:"قطع دجاج للأطفال · ٥ قطع",
        ds_en:"Crispy chicken bites with fries & your choice of honey mustard or BBQ. Served with juice.",
