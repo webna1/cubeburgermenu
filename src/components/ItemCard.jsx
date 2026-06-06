@@ -57,12 +57,12 @@ export default function ItemCard({ item }) {
         )}
         {item.opts && <VariantRows opts={item.opts} />}
         {item.sm && <SandwichMealRows sm={item.sm} />}
-        {hasSimplePrice && (
-          <div className="cfoot">
-            <span className={`cprice${pn === null ? ' na' : ''}`}>
-              {item.price || '—'}
-              {pn !== null && <i>IQD</i>}
-            </span>
+        {hasSimplePrice && item.price && (
+          <div className="variants">
+            <div className="vrow">
+              <span className="vlead" />
+              <span className="vprice">{item.price}</span>
+            </div>
           </div>
         )}
       </div>
