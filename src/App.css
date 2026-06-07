@@ -339,7 +339,7 @@ body.cart-open .sheet{transform:translateX(-50%) translateY(0)}
   .cname{font-size:15px}
 }
 @media (min-width:541px){
-  #app{border-radius:24px;top:16px;bottom:16px;inset-inline:auto;
+  #app{border-radius:24px;top:16px;bottom:16px;
     box-shadow:0 0 0 1px var(--line-soft),0 20px 60px rgba(58,35,23,.18)}
-  body{background:#E8DFDA;display:flex;align-items:flex-start;justify-content:center}
+  body{background:#E8DFDA}
 }
