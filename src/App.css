@@ -95,8 +95,8 @@ body[data-view="drinks"] #screen-home{transform:translateX(calc(var(--off,100%)*
 .cube .left{clip-path:polygon(0 25%,50% 50%,50% 100%,0 75%);background:#8A4516}
 .cube .right{clip-path:polygon(50% 50%,100% 25%,100% 75%,50% 100%);background:var(--primary)}
 .wordmark{font-family:'GimmeDanger',var(--head);font-weight:normal;line-height:.95;letter-spacing:.04em;text-align:center}
-.wordmark .l1{display:block;font-size:clamp(20px,6vw,30px);color:var(--text)}
-.wordmark .l2{display:block;font-size:clamp(20px,6vw,30px);color:var(--primary);margin-top:8px}
+.wordmark .l1{display:block;font-size:clamp(24px,7.5vw,38px);color:var(--text)}
+.wordmark .l2{display:block;font-size:clamp(24px,7.5vw,38px);color:var(--primary);margin-top:8px}
 .reshaping{font-family:var(--head);font-weight:600;letter-spacing:.34em;text-transform:uppercase;
   font-size:9px;color:var(--muted);margin-top:8px;padding-left:.34em}
 
