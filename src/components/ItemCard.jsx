@@ -48,7 +48,10 @@ export default function ItemCard({ item }) {
   return (
     <article className="card" data-search={searchStr}>
       <div className="thumb">
-        <ion-icon name="fast-food"></ion-icon>
+        {item.img
+          ? <img src={item.img} alt="" loading="lazy" />
+          : <ion-icon name="fast-food"></ion-icon>
+        }
       </div>
       <div className="cbody">
         <h3 className="cname"><T en={item.nm_en} ar={item.nm_ar} /></h3>
