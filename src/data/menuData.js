@@ -75,7 +75,7 @@ export const MENU = [
     ]
   },
   {
-    id:"chicken", img:"/images/sec-wings.jpg",
+    id:"chicken", img:"/images/sec-boneless.jpg",
     kicker_en:"Chicken Sides", kicker_ar:"أطباق الدجاج الجانبيّة",
     name_en:"Boneless", name_ar:"بدون عظم",
     items:[

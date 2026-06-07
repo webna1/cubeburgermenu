@@ -208,7 +208,7 @@ body.searching .no-results.show{display:block}
   padding:13px;box-shadow:var(--shadow-card)}
 .thumb{flex:0 0 auto;width:84px;height:84px;border-radius:var(--r-tile);display:grid;place-items:center;
   background:var(--primary-soft);color:var(--primary);font-size:40px;overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .cbody{flex:1 1 auto;min-width:0;display:flex;flex-direction:column}
 .cname{font-family:var(--head);font-weight:700;font-size:16px;line-height:1.22;color:var(--text);letter-spacing:-.01em}
 .cdesc{font-family:var(--body);font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:3px}
