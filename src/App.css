@@ -1,3 +1,11 @@
+@font-face{
+  font-family:'GimmeDanger';
+  src:url('/fonts/GimmeDanger.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
   --bg:#F6EFE8; --bg2:#EFE5DA;
   --card:#FFFFFF;
@@ -86,9 +94,9 @@ body[data-view="drinks"] #screen-home{transform:translateX(calc(var(--off,100%)*
 .cube .top{clip-path:polygon(50% 0,100% 25%,50% 50%,0 25%);background:#E07A2E}
 .cube .left{clip-path:polygon(0 25%,50% 50%,50% 100%,0 75%);background:#8A4516}
 .cube .right{clip-path:polygon(50% 50%,100% 25%,100% 75%,50% 100%);background:var(--primary)}
-.wordmark{font-family:var(--head);font-weight:800;line-height:.92;letter-spacing:-.02em;text-align:center}
-.wordmark .l1{display:block;font-size:clamp(34px,11.5vw,54px);color:var(--text)}
-.wordmark .l2{display:block;font-size:clamp(34px,11.5vw,54px);color:var(--primary);margin-top:-4px}
+.wordmark{font-family:'GimmeDanger',var(--head);font-weight:normal;line-height:.95;letter-spacing:.04em;text-align:center}
+.wordmark .l1{display:block;font-size:clamp(38px,13vw,62px);color:var(--text)}
+.wordmark .l2{display:block;font-size:clamp(38px,13vw,62px);color:var(--primary);margin-top:2px}
 .reshaping{font-family:var(--head);font-weight:600;letter-spacing:.34em;text-transform:uppercase;
   font-size:10.5px;color:var(--muted);margin-top:12px;padding-left:.34em}
 
