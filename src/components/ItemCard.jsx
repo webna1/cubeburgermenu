@@ -44,14 +44,16 @@ export default function ItemCard({ item }) {
   const searchStr = `${item.nm_en || ''} ${item.nm_ar || ''} ${item.ds_en || ''} ${item.ds_ar || ''}`.toLowerCase()
   const pn = priceNum(item.price)
   const hasSimplePrice = !item.opts && !item.sm
+  const soldOut = item.available === false
 
   return (
-    <article className="card" data-search={searchStr}>
+    <article className={`card${soldOut ? ' sold-out' : ''}`} data-search={searchStr}>
       <div className="thumb">
         {item.img
           ? <img src={item.img} alt="" loading="lazy" />
           : <ion-icon name="fast-food"></ion-icon>
         }
+        {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}
       </div>
       <div className="cbody">
         <h3 className="cname"><T en={item.nm_en} ar={item.nm_ar} /></h3>
