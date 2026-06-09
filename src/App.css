@@ -39,7 +39,7 @@ html[lang="ar"] .ar{display:inline}
 html[lang="ar"] .ar.blk{display:block}
 .ar{font-family:var(--ar)}
 html[lang="ar"] body{font-family:var(--ar)}
-html[lang="ar"] .cname,html[lang="ar"] .sec-title,html[lang="ar"] .wordmark,html[lang="ar"] .soon h2{font-family:var(--ar)}
+html[lang="ar"] .cname,html[lang="ar"] .sec-title,html[lang="ar"] .soon h2{font-family:var(--ar)}
 
 /* ---------- app frame ---------- */
 #app{position:fixed;inset:0;max-width:var(--maxw);margin:0 auto;overflow:hidden;background:var(--bg);
