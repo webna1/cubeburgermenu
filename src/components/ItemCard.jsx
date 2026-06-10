@@ -50,7 +50,7 @@ export default function ItemCard({ item }) {
     <article className={`card${soldOut ? ' sold-out' : ''}`} data-search={searchStr}>
       <div className="thumb">
         {item.img
-          ? <img src={item.img} alt="" loading="lazy" />
+          ? <img src={item.img} alt="" loading="lazy" style={item.imgPos ? {objectPosition: item.imgPos} : undefined} />
           : <ion-icon name="fast-food"></ion-icon>
         }
         {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}
