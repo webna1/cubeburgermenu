@@ -32,7 +32,7 @@ function SandwichMealRows({ sm }) {
         <span className="vprice">{sm[0]}</span>
       </div>
       <div className="vrow">
-        <span className="vname"><T en="Meal" ar="وجبة" /></span>
+        <span className="vname"><T en="Meal (Drink, Fries and Sauce)" ar="وجبة (مشروب، بطاطا وصلصة)" /></span>
         <span className="vlead" />
         <span className="vprice">{sm[1]}</span>
       </div>
