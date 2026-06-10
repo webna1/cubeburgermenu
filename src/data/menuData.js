@@ -18,7 +18,7 @@ export const MENU = [
        ds_ar:"جبنة موزاريلا مقلية بطبقة مقرمشة، تُقدّم مع صلصة المارينارا المنزليّة.", price:"7,750", img:"/images/item-mozzarella-cubes.jpg"},
       {nm_en:"Jalapeño Cheese Nuggets  9 pcs", nm_ar:"ناغتس الجبن والهالبينو ٩ قطع",
        ds_en:"Lightly fried mix of cheese and chili pepper, served with special sauce.",
-       ds_ar:"مزيج مقلي من الجبن والفلفل الحار، يُقدّم مع صلصة خاصة.", price:"7,750"},
+       ds_ar:"مزيج مقلي من الجبن والفلفل الحار، يُقدّم مع صلصة خاصة.", price:"7,750", img:"/images/item-jalapeno-nuggets.jpg"},
       {nm_en:"Onion Rings 10 pcs", nm_ar:"حلقات البصل ١٠ قطع",
        ds_en:"Ten fried crispy onion rings served with BBQ dipping sauce.",
        ds_ar:"عشر حلقات بصل مقرمشة تُقدّم مع صلصة الباربكيو.", price:"5,500", img:"/images/item-onion-rings.jpg"}
@@ -41,7 +41,7 @@ export const MENU = [
        ds_ar:"مكعّبات بطاطا بالجبن مع صلصة الفلفل والبصل الأخضر ولحم بقري مدخّن.", price:"8,750", img:"/images/item-cube-style-fries.jpg"},
       {nm_en:"Chicken Alfredo Fries", nm_ar:"بطاطا ألفريدو بالدجاج",
        ds_en:"Creamy white sauce with grilled chicken strips over fries & cheese sauce, topped with parmesan & green onion.",
-       ds_ar:"صلصة بيضاء كريميّة مع شرائح دجاج مشوي فوق البطاطا والجبن، مع البارميزان والبصل الأخضر.", price:"8,750"}
+       ds_ar:"صلصة بيضاء كريميّة مع شرائح دجاج مشوي فوق البطاطا والجبن، مع البارميزان والبصل الأخضر.", price:"8,750", img:"/images/item-alfredo-fries.jpg"}
     ]
   },
   {
@@ -142,7 +142,7 @@ export const MENU = [
        ds_ar:"١٥٠غ لحم أنغوس، شيدر، بصل أخضر، طماطم، مخلّل، خس، مع صلصة سريراتشا الحارّة وصلصة الديناميت المنزليّة.", sm:["12,000","15,000"], img:"/images/item-dynamite-burger.jpg"},
       {nm_en:"Chili N Cheese", nm_ar:"تشيلي آند تشيز",
        ds_en:"150g premium quality beef, cheddar, onions, tomato, jalapeños, garlic mayo, topped with house-made hot chili sauce.",
-       ds_ar:"١٥٠غ لحم أنغوس، شيدر، بصل، طماطم، هالبينو، مايونيز الثوم، مع صلصة التشيلي الحارّة المنزليّة.", sm:["12,000","15,000"]},
+       ds_ar:"١٥٠غ لحم أنغوس، شيدر، بصل، طماطم، هالبينو، مايونيز الثوم، مع صلصة التشيلي الحارّة المنزليّة.", sm:["12,000","15,000"], img:"/images/item-chili-cheese.jpg"},
       {nm_en:"Beef Bacon Jam", nm_ar:"بيف بيكون جام",
        ds_en:"150g premium quality beef, smoked cheese, onions, tomato, pickles, garlic mayo & topped with Cube's beef bacon jam recipe.",
        ds_ar:"١٥٠غ لحم أنغوس، جبن مدخّن، بصل، طماطم، مخلّل، مايونيز الثوم، مع وصفة مربّى لحم البقري المدخّن من كيوب.", sm:["13,000","16,000"], img:"/images/item-beef-bacon-jam.jpg"}
