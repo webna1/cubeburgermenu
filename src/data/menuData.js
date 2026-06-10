@@ -68,10 +68,7 @@ export const MENU = [
        ds_ar:"صدر دجاج مشوي على خضار مشكّلة وملفوف أحمر وبصل أخضر مع كروتون بصلصة البلسميك، مغطّى بصلصة الذرة، مرشوش بتشيبوتلي رانش ومزيّن بشرائح الونتون. يُقدّم مع كاساديا بالجبن.", price:"14,750", img:"/images/item-cube-salad.jpg", imgPos:"80% 45%"},
       {nm_en:"Crab Salad", nm_ar:"سلطة السلطعون",
        ds_en:"Julienned crab meat, carrots & cucumbers in candied sauce, topped with red cabbage, wonton strips & cashew nuts.",
-       ds_ar:"شرائح لحم سلطعون وجزر وخيار بصلصة محلّاة، مع الملفوف الأحمر وشرائح الونتون والكاجو.", price:"13,750", img:"/images/item-crab-salad.jpg", imgPos:"center 40%"},
-      {nm_en:"Buffalo Chicken Ranch", nm_ar:"دجاج بافلو رانش", available:false, imgPos:"center 55%",
-       ds_en:"Golden fried chicken breast on mixed greens, iceberg, red cabbage, cherry tomato, onion & croutons in Italian dressing, drizzled with chipotle ranch, topped with grated cheddar. Served with buffalo sauce on the side.",
-       ds_ar:"صدر دجاج مقلي ذهبي على خضار مشكّلة وخس جليدي وملفوف أحمر وطماطم كرزيّة وبصل وكروتون بصلصة إيطاليّة، مرشوش بتشيبوتلي رانش ومغطّى بشيدر مبشور. يُقدّم مع صلصة بافلو على الجانب.", price:"13,750", img:"/images/item-buffalo-ranch-salad.jpg"}
+       ds_ar:"شرائح لحم سلطعون وجزر وخيار بصلصة محلّاة، مع الملفوف الأحمر وشرائح الونتون والكاجو.", price:"13,750", img:"/images/item-crab-salad.jpg", imgPos:"center 40%"}
     ]
   },
   {
@@ -223,18 +220,6 @@ export const MENU = [
 ]
 
 export const DRINKS = [
-  {
-    id:"milkshakes", img:"/images/sec-spread.jpg",
-    kicker_en:"Creamy & Cold", kicker_ar:"كريمي وبارد",
-    name_en:"Milkshakes", name_ar:"ميلك شيك",
-    items:[
-      {nm_en:"Vanilla", nm_ar:"فانيلا", price:"8,000"},
-      {nm_en:"Chocolate", nm_ar:"شوكولاتة", price:"8,000"},
-      {nm_en:"Strawberry", nm_ar:"فراولة", price:"8,000"},
-      {nm_en:"Pineapple", nm_ar:"أناناس", price:"8,000"},
-      {nm_en:"Mango", nm_ar:"مانجو", price:"8,000"}
-    ]
-  },
   {
     id:"mocktails", img:null,
     kicker_en:"Refreshing Sips", kicker_ar:"رشفات منعشة",
