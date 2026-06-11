@@ -95,8 +95,7 @@ export const MENU = [
       {nm_en:"Kids Chicken Bites · 5 pcs", nm_ar:"قطع دجاج للأطفال · ٥ قطع",
        ds_en:"Crispy chicken bites with fries & your choice of honey mustard or BBQ. Served with juice.",
        ds_ar:"قطع دجاج مقرمشة مع بطاطا واختيارك من الهاني مسترد أو الباربكيو. تُقدّم مع عصير.", price:"9,000", img:"/images/item-kids-bites.png", imgPos:"center 50%"}
-    ],
-    meal:true
+    ]
   },
   {
     id:"wings", img:"/images/sec-wings.jpg",
@@ -115,8 +114,7 @@ export const MENU = [
        opts:[
          {o_en:"10 pcs", o_ar:"١٠ قطع", price:"8,500"}
        ]}
-    ],
-    meal:true
+    ]
   },
   {
     id:"beef", img:"/images/sec-burgers.jpg",
