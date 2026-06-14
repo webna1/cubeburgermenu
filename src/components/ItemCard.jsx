@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { T } from './T'
 
 function priceNum(p) {
@@ -41,20 +42,44 @@ function SandwichMealRows({ sm }) {
 }
 
 export default function ItemCard({ item }) {
+  const [lightbox, setLightbox] = useState(false)
   const searchStr = `${item.nm_en || ''} ${item.nm_ar || ''} ${item.ds_en || ''} ${item.ds_ar || ''}`.toLowerCase()
   const pn = priceNum(item.price)
   const hasSimplePrice = !item.opts && !item.sm
   const soldOut = item.available === false
 
+  useEffect(() => {
+    if (!lightbox) return
+    const onKey = e => { if (e.key === 'Escape') setLightbox(false) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox])
+
   return (
     <article className={`card${soldOut ? ' sold-out' : ''}`} data-search={searchStr}>
-      <div className="thumb">
+      <div
+        className={`thumb${item.img ? ' thumb-zoom' : ''}`}
+        onClick={item.img ? () => setLightbox(true) : undefined}
+      >
         {item.img
           ? <img src={item.img} alt="" loading="lazy" style={item.imgPos ? {objectPosition: item.imgPos} : undefined} />
           : <ion-icon name="fast-food"></ion-icon>
         }
         {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}
       </div>
+      {lightbox && (
+        <div className="lb-backdrop" onClick={() => setLightbox(false)}>
+          <button className="lb-close" onClick={e => { e.stopPropagation(); setLightbox(false) }}>
+            <ion-icon name="close"></ion-icon>
+          </button>
+          <img
+            src={item.img}
+            alt={item.nm_en || item.nm_ar || ''}
+            className="lb-img"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
       <div className="cbody">
         <h3 className="cname"><T en={item.nm_en} ar={item.nm_ar} /></h3>
         {(item.ds_en || item.ds_ar) && (
