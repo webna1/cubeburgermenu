@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { T } from './T'
 
 function priceNum(p) {
@@ -67,7 +68,7 @@ export default function ItemCard({ item }) {
         }
         {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}
       </div>
-      {lightbox && (
+      {lightbox && createPortal(
         <div className="lb-backdrop" onClick={() => setLightbox(false)}>
           <button className="lb-close" onClick={e => { e.stopPropagation(); setLightbox(false) }}>
             <ion-icon name="close"></ion-icon>
@@ -78,7 +79,8 @@ export default function ItemCard({ item }) {
             className="lb-img"
             onClick={e => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
       <div className="cbody">
         <h3 className="cname"><T en={item.nm_en} ar={item.nm_ar} /></h3>
