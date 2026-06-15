@@ -4,7 +4,7 @@ export const LangContext = createContext(null)
 
 export function LangProvider({ children }) {
   const [lang, setLangState] = useState(() => {
-    try { return localStorage.getItem('cb_lang') || 'en' } catch { return 'en' }
+    try { return localStorage.getItem('cb_lang') || 'ar' } catch { return 'ar' }
   })
 
   useEffect(() => {
