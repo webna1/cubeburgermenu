@@ -352,6 +352,22 @@ body.cart-open .sheet{transform:translateX(-50%) translateY(0)}
 .toast ion-icon{font-size:18px;color:#7BD389}
 
 /* ============================================================
+   PRELOADER
+   ============================================================ */
+.preloader{position:fixed;inset:0;z-index:200;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:opacity .5s ease}
+.preloader.hiding{opacity:0;pointer-events:none}
+.pl-logo{width:min(40%,120px);height:auto;margin-bottom:20px;
+  filter:drop-shadow(0 6px 14px rgba(58,35,23,.18))}
+.pl-wordmark{font-family:'GimmeDanger',var(--head);font-weight:normal;line-height:.95;
+  letter-spacing:.04em;text-align:center;margin-bottom:36px}
+.pl-l1{display:block;font-size:clamp(24px,7.5vw,38px);color:var(--text)}
+.pl-l2{display:block;font-size:clamp(24px,7.5vw,38px);color:var(--primary);margin-top:26px}
+.pl-bar-wrap{width:min(200px,50%);height:3px;background:var(--line);border-radius:var(--r-pill);overflow:hidden}
+.pl-bar{height:100%;background:var(--primary);border-radius:var(--r-pill);transition:width .2s ease;min-width:4px}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width:390px){
