@@ -1,14 +1,7 @@
 import { useState, useEffect } from 'react'
-import { MENU, DRINKS } from '../data/menuData'
 
 function collectImages() {
-  const urls = new Set()
-  urls.add('/images/cube-logo.png')
-  for (const sec of [...MENU, ...DRINKS]) {
-    if (sec.img) urls.add(sec.img)
-    if (sec.items) for (const item of sec.items) if (item.img) urls.add(item.img)
-  }
-  return [...urls]
+  return ['/images/cube-logo.png']
 }
 
 export function usePreloader() {

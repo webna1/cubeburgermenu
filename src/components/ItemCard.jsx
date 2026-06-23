@@ -44,6 +44,7 @@ function SandwichMealRows({ sm }) {
 
 export default function ItemCard({ item }) {
   const [lightbox, setLightbox] = useState(false)
+  const [imgLoaded, setImgLoaded] = useState(false)
   const searchStr = `${item.nm_en || ''} ${item.nm_ar || ''} ${item.ds_en || ''} ${item.ds_ar || ''}`.toLowerCase()
   const pn = priceNum(item.price)
   const hasSimplePrice = !item.opts && !item.sm
@@ -63,7 +64,10 @@ export default function ItemCard({ item }) {
         onClick={item.img ? () => setLightbox(true) : undefined}
       >
         {item.img
-          ? <img src={item.img} alt="" loading="lazy" style={item.imgPos ? {objectPosition: item.imgPos} : undefined} />
+          ? <img src={item.img} alt="" loading="lazy"
+              className={imgLoaded ? 'img-loaded' : ''}
+              onLoad={() => setImgLoaded(true)}
+              style={item.imgPos ? {objectPosition: item.imgPos} : undefined} />
           : <ion-icon name="fast-food"></ion-icon>
         }
         {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}

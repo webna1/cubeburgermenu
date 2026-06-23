@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { T } from './T'
 import ItemCard from './ItemCard'
 import SauceGrid from './SauceGrid'
 
 export default function MenuSection({ sec, searchQuery }) {
+  const [heroLoaded, setHeroLoaded] = useState(false)
   const q = searchQuery ? searchQuery.toLowerCase() : ''
 
   const visibleItems = sec.items
@@ -19,7 +21,9 @@ export default function MenuSection({ sec, searchQuery }) {
     <section className="sec" id={`sec-${sec.id}`}>
       {sec.img ? (
         <div className="sec-hero">
-          <img src={sec.img} alt="" loading="lazy" />
+          <img src={sec.img} alt="" loading="lazy"
+            className={heroLoaded ? 'img-loaded' : ''}
+            onLoad={() => setHeroLoaded(true)} />
           <div className="sec-hd">
             <div className="kicker"><T en={sec.kicker_en} ar={sec.kicker_ar} /></div>
             <div className="sec-title"><T en={sec.name_en} ar={sec.name_ar} /></div>
