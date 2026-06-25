@@ -3,8 +3,6 @@ import { LangProvider } from './context/LangContext'
 import HomeScreen from './screens/HomeScreen'
 import MenuScreen from './screens/MenuScreen'
 import DrinksScreen from './screens/DrinksScreen'
-import Preloader from './components/Preloader'
-import { usePreloader } from './hooks/usePreloader'
 import './App.css'
 
 function AppInner() {
@@ -12,8 +10,6 @@ function AppInner() {
     const h = (window.location.hash || '').replace('#', '')
     return h === 'menu' || h === 'drinks' ? h : 'home'
   })
-  const { ready, progress } = usePreloader()
-  const [showPreloader, setShowPreloader] = useState(true)
 
   useEffect(() => {
     document.body.setAttribute('data-view', view)
@@ -24,9 +20,6 @@ function AppInner() {
 
   return (
     <>
-      {showPreloader && (
-        <Preloader progress={progress} ready={ready} onDone={() => setShowPreloader(false)} />
-      )}
       <div className="grain" />
       <div id="app">
         <HomeScreen onNavigate={setView} />
