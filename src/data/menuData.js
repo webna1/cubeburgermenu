@@ -227,7 +227,10 @@ export const DRINKS = [
       {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", price:"8,000"},
       {nm_en:"Tropical Mocktail", nm_ar:"موكتيل استوائي", price:"8,000"},
       {nm_en:"Frozen Blackberry Pepsi", nm_ar:"بيبسي توت بارد", price:"8,000"},
-      {nm_en:"Cranberry Orange Smoothie", nm_ar:"سموذي التوت البري والبرتقال", price:"8,000"}
+      {nm_en:"Cranberry Orange Smoothie", nm_ar:"سموذي التوت البري والبرتقال", price:"8,000"},
+      {nm_en:"Lemon and Mint", nm_ar:"ليمون ونعناع", price:"8,000"},
+      {nm_en:"Blue Curacao Mocktail", nm_ar:"موكتيل بلو كيوراساو", price:"8,000"},
+      {nm_en:"Cube Avocado", nm_ar:"كيوب أفوكادو", price:"8,000"}
     ]
   },
   {

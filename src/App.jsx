@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react'
 import { LangProvider } from './context/LangContext'
 import HomeScreen from './screens/HomeScreen'
 import MenuScreen from './screens/MenuScreen'
-import DrinksScreen from './screens/DrinksScreen'
 import './App.css'
 
 function AppInner() {
   const [view, setView] = useState(() => {
     const h = (window.location.hash || '').replace('#', '')
-    return h === 'menu' || h === 'drinks' ? h : 'home'
+    return h === 'menu' ? h : 'home'
   })
 
   useEffect(() => {
@@ -24,7 +23,6 @@ function AppInner() {
       <div id="app">
         <HomeScreen onNavigate={setView} />
         <MenuScreen onBack={() => setView('home')} />
-        <DrinksScreen onBack={() => setView('home')} />
       </div>
     </>
   )

@@ -1,14 +1,16 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLang } from '../context/LangContext'
-import { MENU } from '../data/menuData'
+import { MENU, DRINKS } from '../data/menuData'
 import { T } from '../components/T'
 import MenuSection from '../components/MenuSection'
+
+const ALL = [...MENU, ...DRINKS]
 
 export default function MenuScreen({ onBack }) {
   const { toggleLang } = useLang()
   const [searching, setSearching] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [activeChip, setActiveChip] = useState(MENU[0] ? `sec-${MENU[0].id}` : '')
+  const [activeChip, setActiveChip] = useState(ALL[0] ? `sec-${ALL[0].id}` : '')
   const screenRef = useRef(null)
   const searchInputRef = useRef(null)
   const navRef = useRef(null)
@@ -63,7 +65,7 @@ export default function MenuScreen({ onBack }) {
   }
 
   const hasResults = !searching || !searchQuery ||
-    MENU.some(sec =>
+    ALL.some(sec =>
       sec.sauces || sec.items?.some(it =>
         `${it.nm_en || ''} ${it.nm_ar || ''} ${it.ds_en || ''} ${it.ds_ar || ''}`.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -117,7 +119,7 @@ export default function MenuScreen({ onBack }) {
       </div>
 
       <nav className="secnav" ref={navRef}>
-        {MENU.map(sec => (
+        {ALL.map(sec => (
           <button
             key={sec.id}
             className={`chip${activeChip === `sec-${sec.id}` ? ' on' : ''}`}
@@ -130,7 +132,7 @@ export default function MenuScreen({ onBack }) {
       </nav>
 
       <div className="menu-body" ref={menuBodyRef}>
-        {MENU.map(sec => (
+        {ALL.map(sec => (
           <MenuSection key={sec.id} sec={sec} searchQuery={searching ? searchQuery : ''} />
         ))}
       </div>
