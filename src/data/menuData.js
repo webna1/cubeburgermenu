@@ -159,7 +159,13 @@ export const MENU = [
        ds_ar:"صدر دجاج مشوي متبّل بوصفة الشيف، جبن أبيض، مايونيز الثوم، خس، طماطم، بصل ومخلّل.", sm:["8,750","11,750"], img:"/images/item-grilled-chicken.jpg", imgPos:"20% 50%"},
       {nm_en:"Chicken Philly Cheese Steak", nm_ar:"فيلي تشيز ستيك بالدجاج",
        ds_en:"Chicken breast cuts, mixed cheese, fresh mushrooms, onion, mixed bell pepper & garlic mayo.",
-       ds_ar:"قطع صدر دجاج، جبن مشكّل، فطر طازج، بصل، فلفل ملوّن، مايونيز الثوم.", sm:["10,000","13,000"], img:"/images/item-chicken-philly.jpg", imgPos:"center 60%"}
+       ds_ar:"قطع صدر دجاج، جبن مشكّل، فطر طازج، بصل، فلفل ملوّن، مايونيز الثوم.", sm:["10,000","13,000"], img:"/images/item-chicken-philly.jpg", imgPos:"center 60%"},
+      {nm_en:"Bacon Chicken Burger", nm_ar:"بيكن تشيكن برجر",
+       ds_en:"Freshly grilled chicken breast marinated with our chef's recipe, topped with beef bacon slice and BBQ sauce, white cheese, tomato, onions, lettuce, pickles & garlic mayo.",
+       ds_ar:"صدر دجاج مشوي طازج متبّل بوصفة الشيف، مغطّى بشريحة لحم بقري مدخّن وصلصة الباربكيو، جبن أبيض، طماطم، بصل، خس، مخلّل ومايونيز الثوم.", sm:["9,750","12,750"], img:"/images/item-bacon-chicken-burger.jpg", imgPos:"center 50%"},
+      {nm_en:"BBQ Chicken Burger", nm_ar:"باربكيو تشيكن برجر",
+       ds_en:"Freshly crispy fried chicken breast topped with fried onion rings, BBQ sauce, cheddar cheese, lettuce, tomato, pickles & basted with ranch sauce.",
+       ds_ar:"صدر دجاج مقلي مقرمش طازج مغطّى بحلقات البصل المقلية وصلصة الباربكيو والشيدر والخس والطماطم والمخلّل، مرشوش بصلصة الرانش.", sm:["11,750","14,750"], img:"/images/item-bbq-chicken-burger.jpg", imgPos:"center 50%"}
     ],
     note_en:"Meals served with fries & local drink.",
     note_ar:"تُقدّم الوجبات مع البطاطا ومشروب محلّي."
