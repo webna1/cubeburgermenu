@@ -1,4 +1,4 @@
-const CACHE = 'cube-assets-v2'
+const CACHE = 'cube-assets-v3'
 
 self.addEventListener('install', e => {
   self.skipWaiting()
