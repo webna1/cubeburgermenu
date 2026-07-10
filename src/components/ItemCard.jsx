@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { T } from './T'
+import Icon from './Icon'
 
 function priceNum(p) {
   if (p == null) return null
@@ -64,18 +65,18 @@ export default function ItemCard({ item }) {
         onClick={item.img ? () => setLightbox(true) : undefined}
       >
         {item.img
-          ? <img src={item.img} alt="" loading="lazy"
+          ? <img src={item.img.replace('/images/', '/images/thumbs/')} alt="" loading="lazy" decoding="async"
               className={imgLoaded ? 'img-loaded' : ''}
               onLoad={() => setImgLoaded(true)}
               style={item.imgPos ? {objectPosition: item.imgPos} : undefined} />
-          : <ion-icon name="fast-food"></ion-icon>
+          : <Icon name="fast-food" />
         }
         {soldOut && <span className="sold-out-badge"><T en="Sold Out" ar="نفذ" /></span>}
       </div>
       {lightbox && createPortal(
         <div className="lb-backdrop" onClick={() => setLightbox(false)}>
           <button className="lb-close" onClick={e => { e.stopPropagation(); setLightbox(false) }}>
-            <ion-icon name="close"></ion-icon>
+            <Icon name="close" />
           </button>
           <img
             src={item.img}

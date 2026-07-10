@@ -1,4 +1,4 @@
-const CACHE = 'cube-images-v1'
+const CACHE = 'cube-assets-v2'
 
 self.addEventListener('install', e => {
   self.skipWaiting()
@@ -14,8 +14,8 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url)
-  const isImage = /\.(jpe?g|png|webp|gif|svg)$/i.test(url.pathname)
-  if (!isImage) return
+  const isAsset = /\.(jpe?g|png|webp|gif|svg|woff2?|ttf)$/i.test(url.pathname)
+  if (!isAsset) return
 
   e.respondWith(
     caches.open(CACHE).then(cache =>

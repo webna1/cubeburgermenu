@@ -3,6 +3,7 @@ import { useLang } from '../context/LangContext'
 import { MENU, DRINKS } from '../data/menuData'
 import { T } from '../components/T'
 import MenuSection from '../components/MenuSection'
+import Icon from '../components/Icon'
 
 const ALL = [...MENU, ...DRINKS]
 
@@ -75,7 +76,7 @@ export default function MenuScreen({ onBack }) {
     <section className="screen sub" id="screen-menu" ref={screenRef}>
       <header className="topbar">
         <button className="iconbtn back" onClick={onBack} aria-label="Back">
-          <ion-icon name="arrow-back"></ion-icon>
+          <Icon name="arrow-back" />
         </button>
         <div className="ttl">
           <b><T en="Menu" ar="القائمة" /></b>
@@ -87,7 +88,7 @@ export default function MenuScreen({ onBack }) {
             onClick={searching ? closeSearch : openSearch}
             aria-label={searching ? 'Close search' : 'Search'}
           >
-            <ion-icon name={searching ? 'close' : 'search'}></ion-icon>
+            <Icon name={searching ? 'close' : 'search'} />
           </button>
           <button className="iconbtn langbtn" onClick={toggleLang} aria-label="Switch language">
             <span className="en ar-lbl">ع</span>
@@ -98,7 +99,7 @@ export default function MenuScreen({ onBack }) {
 
       <div className="searchwrap">
         <div className={`searchbox${searchQuery ? ' has' : ''}`}>
-          <ion-icon name="search"></ion-icon>
+          <Icon name="search" />
           <input
             ref={searchInputRef}
             type="text"
@@ -113,7 +114,7 @@ export default function MenuScreen({ onBack }) {
             onClick={() => { setSearchQuery(''); searchInputRef.current?.focus() }}
             aria-label="Clear"
           >
-            <ion-icon name="close"></ion-icon>
+            <Icon name="close" />
           </button>
         </div>
       </div>
@@ -138,12 +139,12 @@ export default function MenuScreen({ onBack }) {
       </div>
 
       <div className={`no-results${searching && searchQuery && !hasResults ? ' show' : ''}`}>
-        <ion-icon name="search"></ion-icon>
+        <Icon name="search" />
         <p><T en="No items found" ar="لا توجد نتائج" /></p>
       </div>
 
       <footer className="foot">
-        <img className="logo-foot" src="/images/cube-logo.png" alt="Cube Burger" />
+        <img className="logo-foot" src="/images/cube-logo.webp" alt="Cube Burger" loading="lazy" />
         <div className="fl"><T en="All prices in Iraqi Dinar (IQD)" ar="جميع الأسعار بالدينار العراقي" /></div>
         <div className="fl brandline">@cubeburgeriraq</div>
         <div className="fl"><T en="King of the Table" ar="ملك الطاولة" /></div>

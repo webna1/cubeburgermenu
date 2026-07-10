@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { T } from './T'
 import ItemCard from './ItemCard'
 import SauceGrid from './SauceGrid'
+import Icon from './Icon'
 
 export default function MenuSection({ sec, searchQuery }) {
   const [heroLoaded, setHeroLoaded] = useState(false)
@@ -52,7 +53,7 @@ export default function MenuSection({ sec, searchQuery }) {
 
       {sec.meal && (
         <div className="ribbon">
-          <ion-icon name="star"></ion-icon>
+          <Icon name="star" />
           <span className="rt">
             <T
               en={<>Make it a meal — add a drink + fries for just <b>3,750 IQD</b></>}
@@ -64,7 +65,7 @@ export default function MenuSection({ sec, searchQuery }) {
 
       {(sec.note_en || sec.note_ar) && (
         <div className="sec-note">
-          <ion-icon name="information-circle"></ion-icon>
+          <Icon name="information-circle" />
           <span><T en={sec.note_en} ar={sec.note_ar} /></span>
         </div>
       )}

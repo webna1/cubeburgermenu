@@ -1,5 +1,6 @@
 import { useLang } from '../context/LangContext'
 import { T } from '../components/T'
+import Icon from '../components/Icon'
 
 export default function HomeScreen({ onNavigate }) {
   const { lang, setLang } = useLang()
@@ -9,7 +10,7 @@ export default function HomeScreen({ onNavigate }) {
       <div className="hero">
         <div className="toprow">
           <span className="loc">
-            <ion-icon name="location"></ion-icon>
+            <Icon name="location" />
             <T en="Cube Burger · Baghdad, Iraq" ar="كيوب برجر · بغداد، العراق" />
           </span>
           <div className="lang" role="group" aria-label="Language">
@@ -27,7 +28,7 @@ export default function HomeScreen({ onNavigate }) {
         </div>
 
         <div className="brand">
-          <img className="logo-mark" src="/images/cube-logo.png" alt="Cube Burger logo" />
+          <img className="logo-mark" src="/images/cube-logo.webp" alt="Cube Burger logo" fetchPriority="high" />
           <div className="wordmark">
             <span className="l1">CUBE</span>
             <span className="l2">BURGER</span>
@@ -39,16 +40,16 @@ export default function HomeScreen({ onNavigate }) {
 
         <nav className="cta">
           <button className="cbtn cbtn-primary" onClick={() => onNavigate('menu')}>
-            <span className="ico"><ion-icon name="fast-food"></ion-icon></span>
+            <span className="ico"><Icon name="fast-food" /></span>
             <span className="txt">
               <span className="big"><T en="View Menu" ar="عرض القائمة" /></span>
               <span className="sub"><T en="Burgers · Sides · Drinks" ar="برجر · أطباق جانبية · مشروبات" /></span>
             </span>
-            <span className="arr"><ion-icon name="arrow-forward"></ion-icon></span>
+            <span className="arr"><Icon name="arrow-forward" /></span>
           </button>
         </nav>
 
-        <div className="handle"><ion-icon name="logo-instagram"></ion-icon> @cubeburger_irq</div>
+        <div className="handle"><Icon name="logo-instagram" /> @cubeburger_irq</div>
       </div>
     </section>
   )
