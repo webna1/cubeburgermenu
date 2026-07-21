@@ -230,13 +230,13 @@ export const DRINKS = [
     name_en:"Mocktails & Smoothies", name_ar:"موكتيل وسموذي",
     items:[
       {nm_en:"Breezy Bay", nm_ar:"بريزي باي", price:"8,000"},
-      {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", price:"8,000"},
-      {nm_en:"Tropical Mocktail", nm_ar:"موكتيل استوائي", price:"8,000"},
-      {nm_en:"Frozen Blackberry Pepsi", nm_ar:"بيبسي توت بارد", price:"8,000"},
-      {nm_en:"Cranberry Orange Smoothie", nm_ar:"سموذي التوت البري والبرتقال", price:"8,000"},
-      {nm_en:"Lemon and Mint", nm_ar:"ليمون ونعناع", price:"8,000"},
-      {nm_en:"Blue Curacao Mocktail", nm_ar:"موكتيل بلو كيوراساو", price:"8,000"},
-      {nm_en:"Cube Avocado", nm_ar:"كيوب أفوكادو", price:"8,000"}
+      {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", price:"7,000"},
+      {nm_en:"Tropical Mocktail", nm_ar:"موكتيل استوائي", price:"4,000"},
+      {nm_en:"Frozen Blackberry Pepsi", nm_ar:"بيبسي توت بارد", price:"6,000"},
+      {nm_en:"Pina Colada", nm_ar:"بينا كولادا", price:"5,000"},
+      {nm_en:"Lemon and Mint", nm_ar:"ليمون ونعناع", price:"4,000"},
+      {nm_en:"Blue Curacao Mocktail", nm_ar:"موكتيل بلو كيوراساو", price:"4,500"},
+      {nm_en:"Cube Avocado", nm_ar:"كيوب أفوكادو", price:"7,000"}
     ]
   },
   {
