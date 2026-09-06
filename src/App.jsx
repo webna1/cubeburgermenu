@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { LangProvider } from './context/LangContext'
 import HomeScreen from './screens/HomeScreen'
 import MenuScreen from './screens/MenuScreen'
+import ConstructionScreen from './screens/ConstructionScreen'
+import { UNDER_CONSTRUCTION } from './config'
 import './App.css'
 
 function AppInner() {
@@ -31,7 +33,12 @@ function AppInner() {
 export default function App() {
   return (
     <LangProvider>
-      <AppInner />
+      {UNDER_CONSTRUCTION
+        ? <>
+            <div className="grain" />
+            <div id="app"><ConstructionScreen /></div>
+          </>
+        : <AppInner />}
     </LangProvider>
   )
 }

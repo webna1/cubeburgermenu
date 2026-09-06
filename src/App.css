@@ -420,3 +420,47 @@ body.cart-open .sheet{transform:translateX(-50%) translateY(0)}
     box-shadow:0 0 0 1px var(--line-soft),0 20px 60px rgba(58,35,23,.18)}
   body{background:#E8DFDA}
 }
+
+/* ---------- under construction gate ---------- */
+.uc{position:absolute;inset:0;overflow-y:auto;background:var(--bg);
+  display:flex;align-items:center;justify-content:center;padding:32px 22px}
+.uc-lang{position:absolute;top:18px;inset-inline-end:18px}
+.uc-stage{width:100%;max-width:var(--maxw);display:flex;flex-direction:column;align-items:center;text-align:center}
+
+.uc-cube{margin-bottom:6px}
+.uc-cube .cube{margin-bottom:0}
+.uc-cube .cube i{animation:uc-drift 3.6s cubic-bezier(.65,0,.35,1) infinite}
+.uc-cube .cube .top{--dx:0px;--dy:-15px;animation-delay:0s}
+.uc-cube .cube .left{--dx:-13px;--dy:8px;animation-delay:.12s}
+.uc-cube .cube .right{--dx:13px;--dy:8px;animation-delay:.24s}
+@keyframes uc-drift{
+  0%,8%{transform:translate(0,0)}
+  38%,52%{transform:translate(var(--dx),var(--dy))}
+  84%,100%{transform:translate(0,0)}
+}
+
+.uc-wordmark{margin-top:22px}
+.uc-wordmark .l2{margin-top:22px}
+
+.uc-head{font-family:var(--head);font-weight:600;font-size:clamp(17px,4.6vw,21px);
+  color:var(--text);margin-top:34px;line-height:1.35;max-width:24ch;text-wrap:balance}
+html[lang="ar"] .uc-head{font-family:var(--ar);line-height:1.6}
+.uc-sub{font-size:14px;color:var(--muted);margin-top:10px;max-width:34ch;text-wrap:balance}
+html[lang="ar"] .uc-sub{font-family:var(--ar)}
+
+.uc-ig{margin-top:32px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  background:var(--card);border:1px solid var(--line-soft);border-radius:var(--r-pill);
+  padding:10px 16px;box-shadow:var(--shadow);
+  transition:transform .16s cubic-bezier(.3,1.4,.5,1),box-shadow .25s}
+.uc-ig:hover{transform:translateY(-2px);box-shadow:var(--shadow-card)}
+.uc-ig:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.uc-ig .icon{font-size:18px;color:var(--primary)}
+.uc-ig-txt{font-family:var(--head);font-weight:600;font-size:13px;color:var(--text)}
+html[lang="ar"] .uc-ig-txt{font-family:var(--ar)}
+.uc-ig-handle{font-size:13px;color:var(--faint);direction:ltr;unicode-bidi:isolate}
+
+@media (prefers-reduced-motion:reduce){
+  .uc-cube .cube i{animation:none}
+  .uc-ig{transition:none}
+  .uc-ig:hover{transform:none}
+}
