@@ -187,17 +187,17 @@ export const MENU = [
     kicker_en:"Sweet finish", kicker_ar:"ختام حلو",
     name_en:"Desserts", name_ar:"الحلويّات",
     items:[
-      {nm_en:"Molten Chocolate Cake", nm_ar:"مولتن كيك", price:"7,000"},
-      {nm_en:"Brownies Sundae", nm_ar:"براوني صنداي",
+      {nm_en:"Molten Chocolate Cake", nm_ar:"مولتن كيك", img:"/images/item-molten-cake.webp", price:"7,000"},
+      {nm_en:"Brownies Sundae", nm_ar:"براوني صنداي", img:"/images/item-brownies-sundae.webp",
        ds_en:"Add a scoop of ice cream +1,000.",
        ds_ar:"أضف كرة آيس كريم +١٬٠٠٠.", price:"5,500"},
-      {nm_en:"Cookies Melt", nm_ar:"بافي كوكيز",
+      {nm_en:"Cookies Melt", nm_ar:"بافي كوكيز", img:"/images/item-cookies-melt.webp",
        ds_en:"Milk chocolate or double chocolate.",
        ds_ar:"شوكولاتة بالحليب أو دبل شوكولاتة.", price:"7,000"},
-      {nm_en:"San Sebastian", nm_ar:"سان سيبستيان",
+      {nm_en:"San Sebastian", nm_ar:"سان سيبستيان", img:"/images/item-san-sebastian.webp",
        ds_en:"Cheesecake with chocolate sauce.",
        ds_ar:"تشيز كيك مع صلصة الشوكولاتة.", price:"6,500"},
-      {nm_en:"Lutsella", nm_ar:"لوتسيلا", price:"7,000"}
+      {nm_en:"Lutsella", nm_ar:"لوتسيلا", img:"/images/item-lutsella.webp", price:"7,000"}
     ]
   },
   {
@@ -256,13 +256,13 @@ export const DRINKS = [
     kicker_en:"Refreshing Sips", kicker_ar:"رشفات منعشة",
     name_en:"Mocktails & Smoothies", name_ar:"موكتيل وسموذي",
     items:[
-      {nm_en:"Breezy Bay", nm_ar:"بريزي باي", price:"8,000"},
-      {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", price:"7,000"},
+      {nm_en:"Breezy Bay", nm_ar:"بريزي باي", img:"/images/item-breezy-bay.webp", price:"8,000"},
+      {nm_en:"Bali Mojito", nm_ar:"بالي موهيتو", img:"/images/item-bali-mojito.webp", price:"7,000"},
       {nm_en:"Tropical Mocktail", nm_ar:"موكتيل استوائي", price:"4,000"},
       {nm_en:"Frozen Cherry Pepsi", nm_ar:"بيبسي كرز بارد", price:"6,000"},
-      {nm_en:"Pina Colada", nm_ar:"بينا كولادا", price:"5,000"},
-      {nm_en:"Lemon and Mint", nm_ar:"ليمون ونعناع", price:"4,000"},
-      {nm_en:"Blue Curacao Mocktail", nm_ar:"موكتيل بلو كيوراساو", price:"4,500"},
+      {nm_en:"Pina Colada", nm_ar:"بينا كولادا", img:"/images/item-pina-colada.webp", price:"5,000"},
+      {nm_en:"Lemon and Mint", nm_ar:"ليمون ونعناع", img:"/images/item-lemon-mint.webp", price:"4,000"},
+      {nm_en:"Blue Curacao Mocktail", nm_ar:"موكتيل بلو كيوراساو", img:"/images/item-blue-curacao.webp", price:"4,500"},
       {nm_en:"Cube Avocado", nm_ar:"كيوب أفوكادو", price:"7,000"}
     ]
   },
@@ -271,19 +271,19 @@ export const DRINKS = [
     kicker_en:"Thick & creamy", kicker_ar:"كثيف وكريمي",
     name_en:"Milkshakes", name_ar:"ميلك شيك",
     items:[
-      {nm_en:"Vanilla", nm_ar:"فانيلا",
+      {nm_en:"Vanilla", nm_ar:"فانيلا", img:"/images/item-shake-vanilla.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,000"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,000"}]},
-      {nm_en:"Chocolate", nm_ar:"شوكولاتة",
+      {nm_en:"Chocolate", nm_ar:"شوكولاتة", img:"/images/item-shake-chocolate.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,000"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,000"}]},
-      {nm_en:"Strawberry", nm_ar:"فراولة",
+      {nm_en:"Strawberry", nm_ar:"فراولة", img:"/images/item-shake-strawberry.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,000"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,000"}]},
-      {nm_en:"Mango", nm_ar:"مانجو",
+      {nm_en:"Mango", nm_ar:"مانجو", img:"/images/item-shake-mango.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,000"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,000"}]},
-      {nm_en:"Oreo", nm_ar:"أوريو",
+      {nm_en:"Oreo", nm_ar:"أوريو", img:"/images/item-shake-oreo.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,500"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,500"}]},
-      {nm_en:"Lotus", nm_ar:"لوتس",
+      {nm_en:"Lotus", nm_ar:"لوتس", img:"/images/item-shake-lotus.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,500"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,500"}]},
-      {nm_en:"Nutella", nm_ar:"نوتيلا",
+      {nm_en:"Nutella", nm_ar:"نوتيلا", img:"/images/item-shake-nutella.webp",
        opts:[{o_en:"350 ml", o_ar:"٣٥٠ مل", price:"5,500"}, {o_en:"500 ml", o_ar:"٥٠٠ مل", price:"7,500"}]}
     ]
   },
