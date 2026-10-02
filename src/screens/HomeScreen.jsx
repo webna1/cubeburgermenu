@@ -4,6 +4,7 @@ import Icon from '../components/Icon'
 
 export default function HomeScreen({ onNavigate }) {
   const { lang, setLang } = useLang()
+  const logoSrc = lang === 'ar' ? '/brand/logo-ar-landscape.svg' : '/brand/logo-en-landscape.svg'
 
   return (
     <section className="screen" id="screen-home">
@@ -28,11 +29,7 @@ export default function HomeScreen({ onNavigate }) {
         </div>
 
         <div className="brand">
-          <img className="logo-mark" src="/images/cube-logo.webp" alt="Cube Burger logo" fetchPriority="high" />
-          <div className="wordmark">
-            <span className="l1">CUBE</span>
-            <span className="l2">BURGER</span>
-          </div>
+          <img className="brand-logo" src={logoSrc} alt="Cube Burger" fetchPriority="high" />
           <div className="reshaping">
             <T en="RESHAPING FOOD" ar="نعيد تشكيل الطعام" />
           </div>

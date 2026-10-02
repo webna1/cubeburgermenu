@@ -1,10 +1,10 @@
 import { useLang } from '../context/LangContext'
 import { T } from '../components/T'
-import { CubeLogo } from '../components/CubeLogo'
 import Icon from '../components/Icon'
 
 export default function ConstructionScreen() {
   const { lang, setLang } = useLang()
+  const logoSrc = lang === 'ar' ? '/brand/logo-ar-landscape.svg' : '/brand/logo-en-landscape.svg'
 
   return (
     <section className="uc">
@@ -22,12 +22,7 @@ export default function ConstructionScreen() {
       </div>
 
       <div className="uc-stage">
-        <div className="uc-cube"><CubeLogo size={104} /></div>
-
-        <div className="wordmark uc-wordmark">
-          <span className="l1">CUBE</span>
-          <span className="l2">BURGER</span>
-        </div>
+        <img className="uc-logo" src={logoSrc} alt="Cube Burger" fetchPriority="high" />
 
         <h1 className="uc-head">
           <T en="The menu is being rebuilt." ar="القائمة قيد التحديث." block />
