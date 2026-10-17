@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLang } from '../context/LangContext'
-import { MENU, DRINKS } from '../data/menuData'
+import useLiveMenu from '../hooks/useLiveMenu'
 import { T } from '../components/T'
 import MenuSection from '../components/MenuSection'
 import Icon from '../components/Icon'
 
-const ALL = [...MENU, ...DRINKS]
-
 export default function MenuScreen({ onBack }) {
   const { toggleLang } = useLang()
+  const { status, sections: ALL, retry } = useLiveMenu()
   const [searching, setSearching] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [activeChip, setActiveChip] = useState(ALL[0] ? `sec-${ALL[0].id}` : '')
+  const [activeChip, setActiveChip] = useState('')
+  const shownChip = activeChip || (ALL[0] ? `sec-${ALL[0].id}` : '')
   const screenRef = useRef(null)
   const searchInputRef = useRef(null)
   const navRef = useRef(null)
@@ -123,7 +123,7 @@ export default function MenuScreen({ onBack }) {
         {ALL.map(sec => (
           <button
             key={sec.id}
-            className={`chip${activeChip === `sec-${sec.id}` ? ' on' : ''}`}
+            className={`chip${shownChip === `sec-${sec.id}` ? ' on' : ''}`}
             data-sec={`sec-${sec.id}`}
             onClick={() => scrollToSection(`sec-${sec.id}`)}
           >
@@ -133,6 +133,15 @@ export default function MenuScreen({ onBack }) {
       </nav>
 
       <div className="menu-body" ref={menuBodyRef}>
+        {status === 'loading' && ALL.length === 0 && (
+          <p className="menu-state"><T en="Loading the menu…" ar="جارٍ تحميل القائمة…" /></p>
+        )}
+        {status === 'error' && (
+          <div className="menu-state">
+            <p><T en="The menu is loading slowly. Please try again." ar="القائمة بطيئة في التحميل. حاول مرة أخرى." /></p>
+            <button className="chip on" onClick={retry}><T en="Try again" ar="حاول مجدداً" /></button>
+          </div>
+        )}
         {ALL.map(sec => (
           <MenuSection key={sec.id} sec={sec} searchQuery={searching ? searchQuery : ''} />
         ))}

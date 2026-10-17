@@ -213,6 +213,7 @@ body.searching .secnav{display:none}
 .no-results{display:none;text-align:center;padding:60px 30px;color:var(--muted)}
 .no-results .icon{font-size:46px;color:var(--faint)}
 .no-results p{font-family:var(--head);font-weight:600;font-size:16px;margin-top:14px;color:var(--text)}
+.menu-state{text-align:center;padding:60px 30px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:16px}
 body.searching .no-results.show{display:block}
 
 .sec-hero{position:relative;height:190px;border-radius:var(--r-card);overflow:hidden;margin-bottom:14px;
