@@ -2,6 +2,7 @@
 // the public key, the same rows order.cubeburger.net shows. Sold-out and removed
 // items are filtered out by the database itself.
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, ORDER_SITE } from '../config'
+import { applyLocalOverrides, reorderLocalCategories } from './localOverrides'
 import { SECTION_LOOK, EXTRAS_LOOK, UPGRADES_LOOK } from './sections'
 
 const ITEM_COLS = 'id,category_id,name,description,image_url,base_price,sort_order,size_options,options,customizable_options'
@@ -19,7 +20,7 @@ export async function fetchMenu() {
     get('menu_categories?select=id,name,sort_order&order=sort_order'),
     get(`menu_items?select=${ITEM_COLS}&order=sort_order`),
   ])
-  return toSections(categories, items)
+  return toSections(reorderLocalCategories(categories), applyLocalOverrides(items))
 }
 
 const iqd = (n) => Math.round(n).toLocaleString('en-US')

@@ -1,5 +1,5 @@
 // Flip to false to bring the live menu back.
-export const UNDER_CONSTRUCTION = true
+export const UNDER_CONSTRUCTION = false
 
 // Master menu (the ordering site's database). The publishable key is public by
 // design: the database only lets it read active categories and available items.
