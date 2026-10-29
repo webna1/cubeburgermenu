@@ -1,7 +1,7 @@
-// The live menu: read from the master menu (the ordering site's database) with
-// the public key, the same rows order.cubeburger.net shows. Sold-out and removed
+// The live menu: read from the master menu (the HR project's database) with
+// the public key. Sold-out and removed
 // items are filtered out by the database itself.
-import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, ORDER_SITE } from '../config'
+import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from '../config'
 import { SECTION_LOOK, EXTRAS_LOOK, UPGRADES_LOOK } from './sections'
 
 const ITEM_COLS = 'id,category_id,name,description,image_url,base_price,sort_order,size_options,options,customizable_options'
@@ -24,8 +24,8 @@ export async function fetchMenu() {
 
 const iqd = (n) => Math.round(n).toLocaleString('en-US')
 
-/** Order-site photos are stored as "/menu/x.webp"; dashboard uploads are full URLs. */
-export const photo = (url) => (!url ? null : url.startsWith('/') ? `${ORDER_SITE}${url}` : url)
+/** Photos are full URLs (HR uploads them to Supabase storage). */
+export const photo = (url) => url || null
 
 /**
  * Price rows for one item, all as full prices (like the order site):

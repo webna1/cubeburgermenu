@@ -5,4 +5,3 @@ export const UNDER_CONSTRUCTION = false
 // design: the database only lets it read active categories and available items.
 export const SUPABASE_URL = 'https://cxovnwncltfgsslsyzwm.supabase.co'
 export const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_RTrXuGofkmeAqneaUkBRWw_pRwY_2TD'
-export const ORDER_SITE = 'https://order.cubeburger.net'
