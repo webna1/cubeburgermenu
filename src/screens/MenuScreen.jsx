@@ -4,6 +4,7 @@ import useLiveMenu from '../hooks/useLiveMenu'
 import { T } from '../components/T'
 import MenuSection from '../components/MenuSection'
 import Icon from '../components/Icon'
+import MenuSkeleton, { ChipsSkeleton } from '../components/MenuSkeleton'
 
 export default function MenuScreen({ onBack }) {
   const { toggleLang } = useLang()
@@ -120,6 +121,7 @@ export default function MenuScreen({ onBack }) {
       </div>
 
       <nav className="secnav" ref={navRef}>
+        {status === 'loading' && ALL.length === 0 && <ChipsSkeleton />}
         {ALL.map(sec => (
           <button
             key={sec.id}
@@ -134,7 +136,7 @@ export default function MenuScreen({ onBack }) {
 
       <div className="menu-body" ref={menuBodyRef}>
         {status === 'loading' && ALL.length === 0 && (
-          <p className="menu-state"><T en="Loading the menu…" ar="جارٍ تحميل القائمة…" /></p>
+          <MenuSkeleton />
         )}
         {status === 'error' && (
           <div className="menu-state">

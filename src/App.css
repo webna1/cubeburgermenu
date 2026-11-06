@@ -205,6 +205,19 @@ body.searching .secnav{display:none}
 .chip.on{background:var(--meat);color:var(--on-primary);border-color:var(--meat)}
 .chip.on .icon{opacity:1}
 
+/* skeleton loaders */
+.sk{display:block;border-radius:8px;background:linear-gradient(90deg,var(--bg2) 25%,var(--line-soft) 50%,var(--bg2) 75%);
+  background-size:200% 100%;animation:shimmer 1.4s ease-in-out infinite}
+.sk-chip{height:40px;border-radius:var(--r-pill);flex:0 0 auto}
+.sk-hero{height:190px;border-radius:var(--r-card);margin-bottom:14px}
+.sk-plain{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;padding-top:4px}
+.sk-thumb{flex:0 0 auto;width:84px;height:84px;border-radius:var(--r-tile)}
+.sk-body{gap:8px;justify-content:center}
+.sk-line{height:11px}
+.sk-line.lg{height:16px}
+.sk-line.price{height:13px;width:30%;margin-top:4px}
+@media (prefers-reduced-motion:reduce){.sk{animation:none}}
+
 /* ============================================================
    MENU SECTIONS
    ============================================================ */
